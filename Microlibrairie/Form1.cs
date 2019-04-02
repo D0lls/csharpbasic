@@ -25,7 +25,7 @@ namespace Microlibrairie
 
         private void Microlibrairie_Load(object sender, EventArgs e)
         {
-
+            GridFill();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,7 +61,25 @@ namespace Microlibrairie
                 mySqlCmd.Parameters.AddWithValue("_description", textBox3.Text.Trim());
                 mySqlCmd.ExecuteNonQuery();
                 MessageBox.Show("C'est bien ajouté");
+                GridFill();
             }
+        }
+        void GridFill()
+        {
+            using (MySqlConnection mysqlCon = new MySqlConnection(connectionString))
+            {
+                mysqlCon.Open();
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter("BookViewAll", mysqlCon);
+                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DataTable dtblLivre = new DataTable();
+                sqlDa.Fill(dtblLivre);
+                dataGridView1.DataSource = dtblLivre;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
