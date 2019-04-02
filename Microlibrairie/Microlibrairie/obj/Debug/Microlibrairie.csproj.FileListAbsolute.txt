@@ -1,0 +1,14 @@
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\bin\Debug\Microlibrairie.exe.config
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\bin\Debug\Microlibrairie.exe
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\bin\Debug\Microlibrairie.pdb
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\bin\Debug\MySql.Data.dll
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\bin\Debug\Google.Protobuf.dll
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\bin\Debug\MySql.Data.xml
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.csprojAssemblyReference.cache
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.Microlibrairie.resources
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.Properties.Resources.resources
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.csproj.GenerateResource.cache
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.csproj.CoreCompileInputs.cache
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.csproj.CopyComplete
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.exe
+D:\wamp64\www\csharpbasic\Microlibrairie\Microlibrairie\obj\Debug\Microlibrairie.pdb
