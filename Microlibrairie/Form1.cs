@@ -102,5 +102,20 @@ namespace Microlibrairie
                 button1.Text = "Update";
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection mysqlCon = new MySqlConnection(connectionString))
+            {
+                mysqlCon.Open();
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter("BookSearchByValue", mysqlCon);
+                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDa.SelectCommand.Parameters.AddWithValue("_SearchValue", textBox4.Text);
+                DataTable dtblLivre = new DataTable();
+                sqlDa.Fill(dtblLivre);
+                dataGridView1.DataSource = dtblLivre;
+                dataGridView1.Columns[0].Visible = false;
+            }
+        }
     }
 }
