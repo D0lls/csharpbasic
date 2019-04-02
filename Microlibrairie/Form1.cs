@@ -26,6 +26,7 @@ namespace Microlibrairie
         private void Microlibrairie_Load(object sender, EventArgs e)
         {
             GridFill();
+            Clear();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace Microlibrairie
                 mySqlCmd.Parameters.AddWithValue("_description", textBox3.Text.Trim());
                 mySqlCmd.ExecuteNonQuery();
                 MessageBox.Show("C'est bien ajouté");
+                Clear();
                 GridFill();
             }
         }
@@ -74,12 +76,31 @@ namespace Microlibrairie
                 DataTable dtblLivre = new DataTable();
                 sqlDa.Fill(dtblLivre);
                 dataGridView1.DataSource = dtblLivre;
+                dataGridView1.Columns[0].Visible = false;
             }
+        }
+        void Clear()
+        {
+            textBox1.Text = textBox2.Text = textBox3.Text = textBox4.Text = "";
+            id = 0;
+            button1.Text = "Ajouter";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            if(dataGridView1.CurrentRow.Index != 1)
+            {
+                textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                button1.Text = "Update";
+            }
         }
     }
 }
